@@ -1,0 +1,156 @@
+# importamos las librerias necesarias
+import random
+
+# Definimos la clase Cliente con los atributos nombre, dirección, teléfono y correo
+class Cliente:
+# incluimos un constructor (__init__) para que acepte los argumentos nombre, direccion, telefono y correo
+    def __init__(self, nombre, direccion, telefono, correo):
+        self.nombre = nombre
+        self.direccion = direccion
+        self.telefono = telefono
+        self.correo = correo
+
+# Iniciamos la lista vacía clientes_registrados
+# Creamos una lista para almacenar los clientes registrados
+clientes_registrados = []
+
+
+#Si la opción es 1: 
+# Pedir al usuario que ingrese los datos del cliente 
+# Crear un objeto Cliente con los datos ingresados 
+# Añadir el cliente a la lista clientes_registrados
+# Mostrar "Cliente registrado exitosamente"
+# Función para registrar un nuevo cliente
+def registrar_cliente(nombre, direccion, telefono, correo):
+    # pedimos al usuario que introduzca los datos del cliente a registrar
+    nombre = input("Ingrese el nombre del cliente: ")
+    direccion = input("Ingrese la dirección del cliente: ")
+    telefono = input("Ingrese el teléfono del cliente: ")
+    correo = input("Ingrese el correo del cliente: ")
+    cliente = Cliente(nombre, direccion, telefono, correo)
+    # añadimos el cliente a la lista mediante un append
+    clientes_registrados.append(cliente)
+    print("Cliente registrado exitosamente.")
+
+
+# # Si la opción es 2: 
+# Recorrer la lista clientes_registrados y mostrar los detalles de cada cliente
+# Función para visualizar todos los clientes registrados
+def visualizar_clientes():
+    # hacemos un bucle for que recorra la lista clientes agregados y nos los muestre 
+    for cliente in clientes_registrados:
+        print("Nombre: " + cliente.nombre)
+        print("Dirección: " + cliente.direccion)
+        print("Teléfono: " + cliente.telefono)
+        print("Correo: " + cliente.correo)
+        print("-----------------------------")
+
+
+# Si la opción es 3: 
+# Pedir al usuario que ingrese el nombre del cliente a buscar
+# Recorrer la lista y mostrar los detalles del cliente si se encuentra 
+# Si no se encuentra, mostrar "Cliente no encontrado
+# Función para buscar un cliente por nombre
+def buscar_cliente():
+    # pedimos al usuario que nos proporciones el nombre a buscar
+    nombre = input("Ingrese el nombre del cliente que desea buscar: ")
+    # y mediante un bucle for recorremos la lista y nos muestra el cliente pedido 
+    for cliente in clientes_registrados:
+        if cliente.nombre == nombre:
+            print("Cliente encontrado:")
+            print("Nombre: " + cliente.nombre)
+            print("Dirección: " + cliente.direccion)
+            print("Teléfono: " + cliente.telefono)
+            print("Correo: " + cliente.correo)
+            return
+    print("Cliente no encontrado.")
+
+# Definimos una lista de productos
+productos = [
+    {"nombre": "Cesta de fruta", "precio": 10.99},
+    {"nombre": "USB para programar", "precio": 15.99},
+    {"nombre": "Chanclas", "precio": 8.99},
+]
+#Si la opción es 4: 
+# Pedir al usuario que ingrese el nombre del cliente que realizará la compra 
+# Mostrar la lista de productos con sus precios 
+# Pedir al usuario que elija un producto 
+# Procesar la compra y mostrar el mensaje de confirmación
+
+# Función para realizar una compra
+def realizar_compra():
+    nombre = input("Ingrese el nombre del cliente que realizará la compra: ")
+    for cliente in clientes_registrados:
+        if cliente.nombre == nombre:
+            # Mostrar la lista de productos
+            print("Productos disponibles:")
+            for i, producto in enumerate(productos):
+                print(f"{i + 1}. {producto['nombre']} - ${producto['precio']}")
+
+            # Preguntar al usuario por el producto que desea comprar
+            eleccion_de_producto = input("Introduce el número de producto que desea comprar: ")
+            try:
+                eleccion_de_producto = int(eleccion_de_producto)
+                if 1 <= eleccion_de_producto <= len(productos):
+                    seleccionar_producto = productos[eleccion_de_producto - 1]
+                    print(f"Has seleccionado: {seleccionar_producto['nombre']} por ${seleccionar_producto['precio']}.")
+                    print("La compra se ha realizado correctamente.")
+                else:
+                    print("Opción no válida.")
+            except ValueError:
+                print("Opción no válida. Por favor, introduce un número válido para realizar la operación.")
+            return
+    print("Cliente no encontrado.")
+
+# Si la opción es 5: 
+# Pedir al usuario que ingrese el nombre del cliente para enviar seguimiento 
+# Generar un código de seguimiento aleatorio 
+# Mostrar "Se ha enviado el seguimiento de la compra al cliente"
+
+# Función para enviar SMS y correo de seguimiento de una compra
+def enviar_seguimiento_compra():
+    nombre = input("Ingrese el nombre del cliente para enviar el seguimiento de la compra: ")
+    for cliente in clientes_registrados:
+        if cliente.nombre == nombre:
+            # Generamos un código de seguimiento aleatorio
+            codigo_seguimiento = str(random.randint(1000, 9999))
+            # Aquí se agregaría la lógica para enviar los SMS y correos con los detalles del pedido y el código de seguimiento
+            print("Se ha enviado el seguimiento de la compra al cliente.")
+            return
+    print("Cliente no encontrado.")
+# Mostrar el menú principal:
+#   Registrar un nuevo cliente
+#   Visualizar todos los clientes registrados
+#   Buscar un cliente
+#   Realizar una compra
+#   Enviar seguimiento de una compra
+#   Salir
+# Si la opción es 6: 
+# Mostrar "¡Hasta luego!" y terminar el programa
+# Menú principal
+while True:
+    print("----- SISTEMA DE REGISTRO DE CLIENTES -----")
+    print("1. Registrar un nuevo cliente")
+    print("2. Visualizar todos los clientes registrados")
+    print("3. Buscar un cliente")
+    print("4. Realizar una compra")
+    print("5. Enviar seguimiento de una compra")
+    print("6. Salir")
+    opcion = input("Seleccione una opción: ")
+    if opcion == "1":
+        registrar_cliente()
+    elif opcion == "2":
+        visualizar_clientes()
+    elif opcion == "3":
+        buscar_cliente()
+    elif opcion == "4":
+        realizar_compra()
+    elif opcion == "5":
+        enviar_seguimiento_compra()
+    elif opcion == "6":
+        print("¡Hasta luego!")
+        break
+    else:
+        print("Opción inválida. Por favor, seleccione una opción válida.")
+
+# Fin
