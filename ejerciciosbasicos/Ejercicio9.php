@@ -13,8 +13,4 @@ function mostrarNombres($nombres) {
 
 mostrarNombres($nombres);
 ?>
-dnd ñ dç mndv
-<!-- #region 
-v fd
-  mvdVvmfnfnffm ´rrgñn  mr fbfshhb`pn eg #regioneb `r #region
-bhr #regionfgvgjgrgn #region-->
+
