@@ -86,4 +86,3 @@ $nombreBuscado = readline("Dime un nombre: ");
         echo "Lo sentimos, no se encontró ningún empleado con el nombre ingresado." . PHP_EOL;
     }
 ?>
-
