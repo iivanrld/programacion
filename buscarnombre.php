@@ -70,7 +70,7 @@ $nombreBuscado = readline("Dime un nombre: ");
     // Buscamos el empleado en el array
     $encontrado = false;
     foreach ($empleados as $empleado) {
-        if ($empleado["nombre"] == $nombreBuscado) {
+        if (strtoupper($empleado["nombre"] == $nombreBuscado)) {
             $encontrado = true;
             echo "Información del empleado encontrado: " . PHP_EOL;
             echo "Nombre: " . $empleado["nombre"] . PHP_EOL;
