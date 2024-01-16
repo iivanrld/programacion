@@ -36,10 +36,10 @@
 
     $peso = array(
         'peso pesado'.$peso > 100,
-        'semipesado'.$peso > 91,
-        'peso medio'.$peso > 81,
-        'peso medio ligero'.$peso > 73,
-        'peso ligero'.$peso > 66,
+        'semipesado'.$peso => 91,
+        'peso medio'.$peso => 81,
+        'peso medio ligero'.$peso => 73,
+        'peso ligero'.$peso => 66,
         'peso pluma'.$peso < 66,
     );
 
