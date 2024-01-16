@@ -34,15 +34,15 @@
         array('nombre' => 'Daniel', 'plan' => 'Elite', 'peso' => 100, 'categoria' => 'elite', 'eventos' => 3, 'horas_extra' => 15)
     );
 
-    $pesos = array(
-        'peso pesado'.$pesos > 100,
-        'semipesado'.$pesos > 91,
-        'peso medio'.$pesos > 81,
-        'peso medio ligero'.$pesos > 73,
-        'peso ligero'.$pesos > 66,
-        'peso pluma'.$pesos < 66,
+    $peso = array(
+        'peso pesado'.$peso > 100,
+        'semipesado'.$peso > 91,
+        'peso medio'.$peso > 81,
+        'peso medio ligero'.$peso > 73,
+        'peso ligero'.$peso > 66,
+        'peso pluma'.$peso < 66,
     );
-    
+
     foreach ($usuarios as $usuario) {
         $fianza = calcular_fianza($usuario, 4);
         echo "<p>Nombre: " . $usuario['nombre'] . "</p>";
