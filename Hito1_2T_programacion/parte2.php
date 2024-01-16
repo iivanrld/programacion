@@ -67,6 +67,18 @@
       return "peso pluma";
     }
  }
+
+ $usuarios = array(
+    array('nombre' => 'Ivan', 'plan' => 'Intermedia', 'peso' => 70, 'categoria' => 'intermedia', 'eventos' => 3, 'horas_extra' => 5),
+    array('nombre' => 'Laura', 'plan' => 'intermedia', 'peso' => 80, 'categoria' => 'intermedia', 'eventos' => 1, 'horas_extra' => 0),
+    array('nombre' => 'Rafa', 'plan' => 'Elite', 'peso' => 90, 'categoria' => 'elite', 'eventos' => 5, 'horas_extras' => 10),
+    array('nombre' => 'Irene', 'plan' => 'Principiante', 'peso' => 60, 'categoria' => 'principiante', 'eventos' => 0, 'horas_extra' => 0),
+    array('nombre' => 'Daniel', 'plan' => 'Elite', 'peso' => 100, 'categoria' => 'elite', 'eventos' => 3, 'horas_extra' => 15)
+);
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -75,15 +87,28 @@
 
 <h2>Introduzca los datos del usuario</h2>
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
- Nombre del usuario: <input type="text" name="nombre">
- <br>
- Plan de trabajo: <input type="text" name="plan">
- <br>
- Peso actual en kg: <input type="text" name="peso">
- <br>
- Número de eventos presentados este mes: <input type="text" name="eventos">
- <br>
- Opción de añadir un número de horas extra al mes: <input type="text" name="horas_extra">
- <br><br>
- <input type="submit
+<form action="register.php" method="post">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre"><br>
+    <label for="plan">Plan:</label><br>
+    <input type="text" id="plan" name="plan"><br>
+    <label for="peso">Peso:</label><br>
+    <input type="number" id="peso" name="peso"><br>
+    <label for="categoria">Categoria:</label><br>
+    <input type="text" id="categoria" name="categoria"><br>
+    <label for="eventos">Eventos:</label><br>
+    <input type="number" id="eventos" name="eventos"><br>
+    <label for="horas_extra">Horas extra:</label><br>
+    <input type="number" id="horas_extra" name="horas_extra"><br><br>
+    <input type="submit" value="Registrar">
+</form>
+<?php
+
+$user = array(
+    'nombre' => $_POST['nombre'],
+    'peso' => $_POST['peso'],
+    'plan' => $_POST['plan'],
+    'categoria' => $_POST['categoria'],
+    'eventos' => $_POST['eventos'],
+    'horas_extra' => $_POST['horas_extra']
+);
