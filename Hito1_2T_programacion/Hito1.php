@@ -51,33 +51,33 @@
 <h2>Registro de clientes</h2>
 
 <form action="register.php" method="post">
-    <label for="name">Nombre:</label><br>
-    <input type="text" id="name" name="name"><br>
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre"><br>
     <label for="plan">Plan:</label><br>
     <input type="text" id="plan" name="plan"><br>
-    <label for="weight">Peso:</label><br>
-    <input type="number" id="weight" name="weight"><br>
-    <label for="category">Categoria:</label><br>
-    <input type="text" id="category" name="category"><br>
-    <label for="events">Eventos:</label><br>
-    <input type="number" id="events" name="events"><br>
-    <label for="extra_hours">Horas extra:</label><br>
-    <input type="number" id="extra_hours" name="extra_hours"><br><br>
+    <label for="peso">Peso:</label><br>
+    <input type="number" id="peso" name="peso"><br>
+    <label for="categoria">Categoria:</label><br>
+    <input type="text" id="categoria" name="categoria"><br>
+    <label for="eventos">Eventos:</label><br>
+    <input type="number" id="eventos" name="eventos"><br>
+    <label for="horas_extra">Horas extra:</label><br>
+    <input type="number" id="horas_extra" name="horas_extra"><br><br>
     <input type="submit" value="Registrar">
 </form>
 
 <?php
 
 $user = array(
-    'name' => $_POST['name'],
-    'weight' => $_POST['weight'],
+    'nombre' => $_POST['nombre'],
+    'peso' => $_POST['peso'],
     'plan' => $_POST['plan'],
-    'category' => $_POST['category'],
-    'events' => $_POST['events'],
-    'extra_hours' => $_POST['extra_hours']
+    'categoria' => $_POST['categoria'],
+    'eventos' => $_POST['eventos'],
+    'horas_extra' => $_POST['horas_extra']
 );
 
-$users[] = $user;
+$usuarios[] = $usuario;
 
 // Redirigir al usuario a la página de inicio después de registrarlo
 header('Location: Hito1.php');
