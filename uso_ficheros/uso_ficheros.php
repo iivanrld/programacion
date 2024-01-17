@@ -7,6 +7,7 @@ $archivo = fopen("prueba.txt","w");
 
 //w: abre el archivo para la escritura desde el principio
 //a: abre el archivo para la escritura desde la ultima linea que contenga
+//r: abre el archivo para la lectura
 
 //cierre de archivos de texto
 
@@ -15,3 +16,11 @@ $archivo = fopen("prueba.txt","w");
 fwrite($archivo, "Linea añadida desde codigo al archivo de texto.".PHP_EOL);
 fwrite($archivo,"estas es otra linea añadida desde el codigo al archivo de texto".PHP_EOL);
 fclose($archivo);
+
+//lectura de archivos de texto
+$archivo = fopen("prueba.txt","a");
+
+while (feof($archivo)) {
+    $linea = fgets($archivo);
+    echo $linea;
+}
