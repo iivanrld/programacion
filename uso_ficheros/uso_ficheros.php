@@ -24,3 +24,21 @@ while (feof($archivo)) {
     $linea = fgets($archivo);
     echo $linea;
 }
+
+fclose($archivo);
+
+//mejora de la lectura mediante la comprobacion de existencia de ficheros
+echo PHP_EOL."************Segunda lectura con comprobacion**********";
+
+$nombre_archivo = "prueba.txt";
+
+if (file_exists($nombre_archivo)){
+    $archivo = fopen($nombre_archivo, "r");
+
+    while (feof($archivo)) {
+        $linea = fgets($archivo);
+        echo $linea;
+    }
+
+}
+
