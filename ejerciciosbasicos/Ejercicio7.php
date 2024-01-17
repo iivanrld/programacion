@@ -8,4 +8,3 @@ function cuadrado(){
 }
 
 cuadrado();
-?>
