@@ -9,7 +9,8 @@ $archivo = fopen("prueba.txt","w");
 //a: abre el archivo para la escritura desde la ultima linea que contenga
 
 //cierre de archivos de texto
-fclose($archivo);
+
 // escritura en archivos de texto
 
 fwrite($archivo, "Linea añadida desde codigo al archivo de texto.");
+fclose($archivo);
