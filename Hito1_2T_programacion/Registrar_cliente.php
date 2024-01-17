@@ -17,7 +17,6 @@ $usuarios = array(
     array('nombre' => 'Irene', 'plan' => 'Principiante', 'peso' => 60, 'categoria' => 'principiante', 'eventos' => 0, 'horas_extra' => 0),
     array('nombre' => 'Daniel', 'plan' => 'Elite', 'peso' => 100, 'categoria' => 'elite', 'eventos' => 3, 'horas_extra' => 15)
 );
-
 ?>
 
 <html>
@@ -32,14 +31,18 @@ $usuarios = array(
 <h2>Introduzca los datos del usuario</h2>
     <form action="#" method="post" onsubmit="return validarFormulario()">
           <section>
-            <label for="nombreEmpresa">Nombre/Empresa:</label>
+            <label for="nombreEmpresa">Nombre:</label>
             <input type="text" id="nombreEmpresa" name="nombreEmpresa" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,}" required>
           </section>
           <section>
-            <label for="sectorProfesion">Sector/Profesión:</label>
-            <input type="text" id="sectorProfesion" name="sectorProfesion" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,}" required>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8,12}" required>
           </section>
           <section>
+            <section>
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+          </section>
             <label for="pais">País:</label>
             <select id="pais" name="pais" required>
                 <option value="España">España</option>
@@ -48,18 +51,10 @@ $usuarios = array(
                 <option value="Inglaterra">Inglaterra</option>
                 <option value="Alemania">Alemania</option>
             </select>
-          </section>
-          <section>
-            <label for="correo">Correo electrónico:</label>
-            <input type="email" id="correo" name="correo" required>
-          </section>
-          <section>
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8,12}" required>
-          </section>
-  
           <button type="submit">Enviar</button>
       </form>
+</body>
+</html>
 <?php
 
 $usuarios = array(
@@ -72,6 +67,5 @@ $usuarios = array(
 );
 
 ?>
-</body>
-</html>
+
 

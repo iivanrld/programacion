@@ -8,7 +8,18 @@
   <link rel="stylesheet" href="style.css">
   <title>Solocrossfit</title>
 </head>
-
+<html>
+<body>
+    <nav>
+    <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="plan_entrenamiento.php">Plan de entrenamiento</a></li>
+          <li><a href="Registrar_cliente.php">Registrarse</a></li>
+          <li><a href="Tablas_pesos.php">Categorias por pesos</a></li>
+    </ul>
+    </nav>
+</body>
+</html>
 <?php
 function determinarCategoria($peso) {
     if ($peso > 100) {

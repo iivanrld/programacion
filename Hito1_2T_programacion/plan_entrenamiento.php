@@ -17,6 +17,8 @@
         <li><a href="Tabla_pesos.php">Categoria por pesos</a></li>
     </ul>
     </nav>
+</body>
+</html>
 <?php
  $nombre = "";
  $plan = "";
