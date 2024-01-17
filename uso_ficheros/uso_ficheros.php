@@ -10,7 +10,7 @@ $archivo = fopen("prueba.txt","w");
 
 //cierre de archivos de texto
 
-// escritura en archivos de texto
+//escritura en archivos de texto
 
 fwrite($archivo, "Linea añadida desde codigo al archivo de texto.".PHP_EOL);
 fwrite($archivo,"estas es otra linea añadida desde el codigo al archivo de texto".PHP_EOL);
