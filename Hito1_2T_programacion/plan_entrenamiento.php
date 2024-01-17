@@ -8,6 +8,15 @@
   <link rel="stylesheet" href="style.css">
   <title>Solocrossfit</title>
 </head>
+<body>
+    <nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="plan_entrenamiento.php">Plan de entrenamiento</a></li>
+        <li><a href="Registrar_cliente.php">Registrarse</a></li>
+        <li><a href="Tabla_pesos.php">Categoria por pesos</a></li>
+    </ul>
+    </nav>
 <?php
  $nombre = "";
  $plan = "";
