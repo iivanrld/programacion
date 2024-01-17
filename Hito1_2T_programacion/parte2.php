@@ -76,9 +76,6 @@
     array('nombre' => 'Daniel', 'plan' => 'Elite', 'peso' => 100, 'categoria' => 'elite', 'eventos' => 3, 'horas_extra' => 15)
 );
 
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -112,3 +109,5 @@ $user = array(
     'eventos' => $_POST['eventos'],
     'horas_extra' => $_POST['horas_extra']
 );
+
+?>
