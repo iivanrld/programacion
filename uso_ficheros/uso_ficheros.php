@@ -40,5 +40,7 @@ if (file_exists($nombre_archivo)){
         echo $linea;
     }
     fclose($archivo);
+}else{
+    echo "El archivo que estas intentando leer no existe";
 }
 
