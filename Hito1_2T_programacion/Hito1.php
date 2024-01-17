@@ -78,7 +78,7 @@
     }
  }
 
- $usuarios = array(
+$usuarios = array(
     array('nombre' => 'Ivan', 'plan' => 'Intermedia', 'peso' => 70, 'categoria' => 'intermedia', 'eventos' => 3, 'horas_extra' => 5),
     array('nombre' => 'Laura', 'plan' => 'intermedia', 'peso' => 80, 'categoria' => 'intermedia', 'eventos' => 1, 'horas_extra' => 0),
     array('nombre' => 'Rafa', 'plan' => 'Elite', 'peso' => 90, 'categoria' => 'elite', 'eventos' => 5, 'horas_extras' => 10),
