@@ -62,7 +62,7 @@ $usuarios = array(
       </form>
 <?php
 
-$us = array(
+$usuarios = array(
     'nombre' => $_POST['nombre'],
     'peso' => $_POST['peso'],
     'plan' => $_POST['plan'],
