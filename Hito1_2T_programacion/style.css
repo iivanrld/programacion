@@ -3,6 +3,26 @@ body {
     font-family: Arial, sans-serif;
   }
   
+  .navbar {
+    background-color: #ff8000;
+    color: black;
+}
+
+.navbar a {
+    color: black;
+}
+
+
+.navbar a.active {
+    background-color: #ff8000;
+    color: rgb(54, 53, 53);
+}
+
+
+.navbar a:hover:not(.active) {
+    background-color: #ff8000;
+    color: rgb(54, 53, 53);
+}
   .container {
     max-width: 800px;
     margin: 0 auto;
