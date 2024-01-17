@@ -120,3 +120,6 @@ $user = array(
 );
 
 ?>
+</body>
+</html>
+
