@@ -12,5 +12,4 @@ function mostrarNombres($nombres) {
 }
 
 mostrarNombres($nombres);
-?>
 

@@ -39,6 +39,6 @@ if (file_exists($nombre_archivo)){
         $linea = fgets($archivo);
         echo $linea;
     }
-
+    fclose($archivo);
 }
 
