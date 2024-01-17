@@ -1,62 +1,88 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Solocrossfit</title>
-</head>
-<body>
-
 <?php
-    function calcular_fianza($usuario, $semanas) {
-        $precio_hora = 9.50;
-        $sesion_privada = $usuario['horas_extra'];
-        $total_de_la_sesion = $sesion_privada * $precio_hora;
+ $nombre = "";
+ $plan = "";
+ $peso = 0;
+ $categoria = "";
+ $eventos = 0;
+ $horas_extra = 0;
 
-        $categoria_precio = array(
-            'principiante' => 25,
-            'intermedia' => 30,
-            'elite' => 35
-        );
+ function calcularCoste() {
+    global $nombre, $plan, $peso, $categoria, $eventos, $horas_extra;
 
-        $categoria_precio_fianza = $categoria_precio[$usuario['categoria']];
+    $tarifa = 0;
+    $precio_competicion = 22;
+    $precio_privado = 9.50;
 
-        $evento_fianza = $usuario['eventos'] * 22;
-
-        $total_fianza = $total_de_la_sesion + $categoria_precio_fianza + $evento_fianza;
-
-        return $total_fianza * $semanas;
+    if ($plan == "principiante") {
+      $tarifa = 25;
+    } else if ($plan == "intermedio") {
+      $tarifa = 30;
+    } else if ($plan == "elite") {
+      $tarifa = 35;
     }
 
-    $usuarios = array(
-        array('nombre' => 'Ivan', 'plan' => 'Intermedia', 'peso' => 70, 'categoria' => 'intermedia', 'eventos' => 3, 'horas_extra' => 5),
-        array('nombre' => 'Laura', 'plan' => 'intermedia', 'peso' => 80, 'categoria' => 'intermedia', 'eventos' => 1, 'horas_extra' => 0),
-        array('nombre' => 'Rafa', 'plan' => 'Elite', 'peso' => 90, 'categoria' => 'elite', 'eventos' => 5, 'horas_extras' => 10),
-        array('nombre' => 'Irene', 'plan' => 'Principiante', 'peso' => 60, 'categoria' => 'principiante', 'eventos' => 0, 'horas_extra' => 0),
-        array('nombre' => 'Daniel', 'plan' => 'Elite', 'peso' => 100, 'categoria' => 'elite', 'eventos' => 3, 'horas_extra' => 15)
-    );
+    $costo_entrenamientos = $tarifa * $eventos;
+    $costo_competiciones = $precio_competicion * $eventos;
+    $costo_privado = $precio_privado * $horas_extra;
 
-    $peso = array(
-        'peso pesado'.$peso > 100,
-        'semipesado'.$peso => 91,
-        'peso medio'.$peso => 81,
-        'peso medio ligero'.$peso => 73,
-        'peso ligero'.$peso => 66,
-        'peso pluma'.$peso < 66,
-    );
+    $total = $costo_entrenamientos + $costo_competiciones + $costo_privado;
 
-    foreach ($usuarios as $usuario) {
-        $fianza = calcular_fianza($usuario, 4);
-        echo "<p>Nombre: " . $usuario['nombre'] . "</p>";
-        echo "<p>Plan: " . $usuario['plan'] . "</p>";
-        echo "<p>Peso: " . $usuario['peso'] . " kg</p>";
-        echo "<p>Categoria: " . $usuario['categoria'] . "</p>";
-        echo "<p>Eventos: " . $usuario['eventos'] . "</p>";
-        echo "<p>Horas extra: " . $usuario['horas_extra'] . "</p>";
-        echo "<p>Total de fianza: $" . number_format($fianza, 2) . "</p>";
-        echo "<hr>";
+    echo "Nombre del usuario: " . $nombre . "<br>";
+    echo "Eventos presentados este mes: " . $eventos . "<br>";
+    echo "Horas extra: " . $horas_extra . "<br>";
+    echo "Costo total de los entrenamientos y competiciones del mes: $" . $total . "<br>";
+    echo "Categoria de peso: " . $categoria . "<br>";
+ }
+
+ if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre = test_input($_POST["nombre"]);
+    $plan = test_input($_POST["plan"]);
+    $peso = test_input($_POST["peso"]);
+    $categoria = determinarCategoria($peso);
+    $eventos = test_input($_POST["eventos"]);
+    $horas_extra = test_input($_POST["horas_extra"]);
+
+    calcularCoste();
+ }
+
+ function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+ }
+
+ function determinarCategoria($peso) {
+    if ($peso > 100) {
+      return "peso pesado";
+    } else if ($peso >= 91 && $peso <= 100) {
+      return "semipesado";
+    } else if ($peso >= 81 && $peso <= 91) {
+      return "peso medio";
+    } else if ($peso >= 73 && $peso <= 81) {
+      return "peso medio ligero";
+    } else if ($peso >= 66 && $peso <= 73) {
+      return "peso ligero";
+    } else {
+      return "peso pluma";
     }
+ }
+
+ $usuarios = array(
+    array('nombre' => 'Ivan', 'plan' => 'Intermedia', 'peso' => 70, 'categoria' => 'intermedia', 'eventos' => 3, 'horas_extra' => 5),
+    array('nombre' => 'Laura', 'plan' => 'intermedia', 'peso' => 80, 'categoria' => 'intermedia', 'eventos' => 1, 'horas_extra' => 0),
+    array('nombre' => 'Rafa', 'plan' => 'Elite', 'peso' => 90, 'categoria' => 'elite', 'eventos' => 5, 'horas_extras' => 10),
+    array('nombre' => 'Irene', 'plan' => 'Principiante', 'peso' => 60, 'categoria' => 'principiante', 'eventos' => 0, 'horas_extra' => 0),
+    array('nombre' => 'Daniel', 'plan' => 'Elite', 'peso' => 100, 'categoria' => 'elite', 'eventos' => 3, 'horas_extra' => 15)
+);
+
 ?>
 
-<h2>Registro de clientes</h2>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Introduzca los datos del usuario</h2>
 
 <form action="register.php" method="post">
     <label for="nombre">Nombre:</label><br>
@@ -73,7 +99,6 @@
     <input type="number" id="horas_extra" name="horas_extra"><br><br>
     <input type="submit" value="Registrar">
 </form>
-
 <?php
 
 $user = array(
@@ -85,11 +110,4 @@ $user = array(
     'horas_extra' => $_POST['horas_extra']
 );
 
-$usuarios[] = $usuario;
-
-// Redirigir al usuario a la página de inicio después de registrarlo
-header('Location: Hito1.php');
-
 ?>
-</body>
-</html>
