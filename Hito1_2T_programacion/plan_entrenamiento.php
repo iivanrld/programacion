@@ -53,7 +53,7 @@
     $horas_extra = test_input($_POST["horas_extra"]);
 
     calcularCoste();
- }
+}
  function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
