@@ -1,0 +1,36 @@
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b876ff;
+    color: #333;
+}
+
+/* Estilos para la cabecera */
+header {
+    background-color: #333;
+    color: #8750ff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para el enlace "Volver al inicio" */
+a.volver-al-inicio {
+    display: inline-block;
+    background-color: #008CBA;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+a.volver-al-inicio:hover {
+    background-color: #007B9A;
+}
