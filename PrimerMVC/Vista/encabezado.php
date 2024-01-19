@@ -17,3 +17,7 @@
     <p>Hola soy Ivan Roldan y esta es mi pagina web</p>
 </body>
 </html>
+
+<?php
+require("cuerpo.php");
+require("pie.php");
