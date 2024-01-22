@@ -10,4 +10,4 @@ if (empty($nombre) || empty($apellidos)) {
 } else {
     echo "¡Gracias, $nombre! Sus apellidos son $apellidos.";
 }
-// Function to display the confirmation page
+
