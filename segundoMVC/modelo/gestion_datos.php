@@ -7,15 +7,6 @@ $apellidos = $_POST['apellidos'];
 
 fwrite($archivo,'Hola '.$nombre."".$apellidos.PHP_EOL);
 
-$archivo = fopen("datos.dat","a");
-
-while (feof($archivo)) {
-    $linea = fgets($archivo);
-    echo $linea;
-}
-
-fclose($archivo);
-
 $nombre_archivo = "datos.dat";
 
 if (file_exists($nombre_archivo)){
