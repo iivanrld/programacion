@@ -13,3 +13,5 @@
 
 <?php
 require("encabezado.php");
+require("cuerpo.php");
+require("pie.php");

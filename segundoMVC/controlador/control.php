@@ -1,4 +1,5 @@
 <?php
+require_once("cuerpo.php");
 // Function to display the confirmation page
 function confirmationPage($nombre, $apellidos) {
 ?>
