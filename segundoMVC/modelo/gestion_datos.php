@@ -1,5 +1,5 @@
 <?php
-require_once("control.php");
+require("control.php");
 $archivo = fopen("datos.dat","w");
 // Recuperar los datos del formulario
 $nombre = $_POST['nombre'];
