@@ -34,5 +34,5 @@ if (empty($nombre) || empty($apellidos)) {
 } else {
     echo "¡Gracias, $nombre! Sus apellidos son $apellidos.";
 }
-require("confirmacion.php");
+require("control.php");
 ?>
