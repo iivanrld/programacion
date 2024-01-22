@@ -3,25 +3,25 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #d77aff;
 }
 
 .contenedor {
     max-width: 500px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #5e5e5e;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #333;
+    color: #000000;
     text-align: center;
 }
 
 label {
     display: block;
-    color: #555;
+    color: #000000;
     margin-bottom: 5px;
 }
 
