@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #c2ffc4;
     box-sizing: border-box;
 }
 
@@ -11,7 +12,7 @@ header {
 }
 
 .title {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 28px;
 }
 
@@ -22,9 +23,9 @@ header {
 }
 
 .boton-ver, .boton-añadir {
-    background-color: #f44336;
+    background-color: #b9b9b9;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -45,5 +46,5 @@ th, td {
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #ededed;
 }
