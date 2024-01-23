@@ -28,7 +28,7 @@ $apellidos = $_POST['apellidos'];
         }
         fclose($file);
         ?>
-    </table>
+</table>
     <div class="boton">
         <a href="index.php"><button class="boton-volver">Volver a inicio</button></a>
     </div>
