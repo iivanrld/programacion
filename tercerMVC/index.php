@@ -11,7 +11,10 @@
 <header>
     <h1 class="title">Sistema de Gestión</h1>
 </header>
-
+<div class="botones">
+    <button class="boton-ver">Ver datos</button>
+    <button class="boton-añadir">Añadir datos</button>
+</div>
 
 </body>
 </html>
