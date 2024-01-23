@@ -10,8 +10,7 @@
 <table>
         <tr>
             <th>Nombre</th>
-            <th>Edad</th>
-            <th>Email</th>
+            <th>Apellido</th>
         </tr>
         <?php
         $filename = 'datos.dat';
@@ -21,7 +20,6 @@
             echo "<tr>";
             echo "<td>{$data[0]}</td>";
             echo "<td>{$data[1]}</td>";
-            echo "<td>{$data[2]}</td>";
             echo "</tr>";
         }
         fclose($file);
