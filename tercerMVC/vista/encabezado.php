@@ -17,3 +17,7 @@
     <p>Hola soy Ivan Roldan y esta es mi pagina web</p>
 </body>
 </html>
+
+<?php
+require("formulario.php");
+require("pie.php");

@@ -13,7 +13,7 @@
 </header>
 <div class="botones">
     <a href="datos.dat"><button class="boton-ver">Ver datos</button></a>
-    <a href="formulario.php"><button class="boton-añadir">Añadir datos</button></a>
+    <a href="encabezado.php"><button class="boton-añadir">Añadir datos</button></a>
 </div>
 </body>
 </html>
