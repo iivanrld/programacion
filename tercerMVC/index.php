@@ -13,6 +13,7 @@
 </header>
 <div class="botones">
     <button class="boton-ver">Ver datos</button>
+    
     <button class="boton-añadir">Añadir datos</button>
 </div>
 
