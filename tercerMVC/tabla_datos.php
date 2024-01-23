@@ -28,9 +28,9 @@
         ?>
     </table>
 
-    <form action="index.php" method="get">
-        <input type="submit" value="Volver al menú principal">
-    </form>
+    <div class="boton">
+    <a href="index.php"><button class="boton-volver">Volver a inicio</button></a>
+    </div>
 </body>
 </html>
 
