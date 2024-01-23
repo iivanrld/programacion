@@ -25,9 +25,8 @@
         fclose($file);
         ?>
     </table>
-
     <div class="boton">
-    <a href="index.php"><button class="boton-volver">Volver a inicio</button></a>
+        <a href="index.php"><button class="boton-volver">Volver a inicio</button></a>
     </div>
 </body>
 </html>
