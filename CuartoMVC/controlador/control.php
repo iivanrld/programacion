@@ -1,5 +1,5 @@
 <?php
-require("formulario.php");
+require("../vista/formulario.php");
 // Recuperar los datos del formulario
 $nombre = $_POST['nombre'];
 $apellidos = $_POST['apellidos'];
@@ -10,3 +10,5 @@ if (empty($nombre) || empty($apellidos)) {
 } else {
     echo "¡Gracias, $nombre! Sus apellidos son $apellidos.";
 }
+
+require("../modelo/eliminar.php");
