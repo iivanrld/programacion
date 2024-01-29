@@ -19,5 +19,5 @@
 </html>
 
 <?php
-require("formulario.php");
-require("pie.php");
+require("../vista/formulario.php");
+require("../vista/pie.php");

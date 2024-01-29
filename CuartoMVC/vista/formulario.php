@@ -26,5 +26,5 @@
 </html>
 
 <?php
-require("control.php");
+require("../controlador/control.php");
 ?>
