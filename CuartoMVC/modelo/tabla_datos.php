@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php
-require("formulario.php");
+require("../vista/formulario.php");
 $nombre = $_POST['nombre'];
 $apellidos = $_POST['apellidos'];
 ?>
