@@ -1,7 +1,8 @@
 <?php
-include('../plantillas/encabezado.php');
-?>
 
+?>
+<!-- importamos la plantilla de la cabecera -->
+<!-- mostramos una tabla de informacion -->
 <h1>Plan de estrenamiento - Precio (£GBP)</h1>
     <table>
         <thead>
@@ -38,10 +39,10 @@ include('../plantillas/encabezado.php');
             </tr>
         </tbody>
     </table>
-
+<!-- aqui tenemos un formulario mediante el cual podemos crear un usuario, plan de entreno, peso y categoria -->
 <div class="container mt-5">
     <h2>Añadir Usuario</h2>
-    <form action="controladores/usuarioControlador.php" method="POST">
+    <form action="solocrosfit/controlador/usuarioControlador.php" method="POST">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         <input type="hidden" id="accion" name="accion" value="crear"> <br><br>
@@ -71,6 +72,7 @@ include('../plantillas/encabezado.php');
     </form>
 </div>
 
+<!-- tambien podemos ver la informacion de un usuario -->
 <div class="container mt-5">
     <h2>Ver usuario</h2>
     <form action="controladores/usuarioControlador.php" method="POST">
@@ -80,7 +82,7 @@ include('../plantillas/encabezado.php');
         <button type="submit" class="btn btn-primary">Ver usuario</button>
     </form>
 </div>
-
+<!-- actualizar la informacion de un usuario -->
 <div class="container mt-5">
     <h2>Actualizar usuario</h2>
     <form action="controladores/usuarioControlador.php" method="POST">
@@ -112,7 +114,7 @@ include('../plantillas/encabezado.php');
         <button type="submit" class="btn btn-primary">Actualizar usuario</button>
     </form>
 </div>
-
+<!-- borrar al usuario y su informacion -->
 <div class="container mt-5">
     <h2>Eliminar usuario</h2>
     <form action="controladores/usuarioControlador.php" method="POST">
@@ -122,7 +124,7 @@ include('../plantillas/encabezado.php');
         <button type="submit" class="btn btn-primary">Eliminar usuario</button>
     </form>
 </div>
-
+<!-- por ultimo importamos tambien nuestra plantilla de footer -->
 <?php
-include('../plantillas/footer.php');
+require_once('../plantillas/footer.php');
 ?>

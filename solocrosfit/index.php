@@ -17,8 +17,10 @@
       }
     </style>
   </head>
+  <!-- aqui tenemos dos botones, uno que nos lleva a crear, ver, actualizar y eliminar usuarios -->
+  <!-- y el otro que nos da la opcion de crear un plan de entrenamiento para calcularlo -->
   <body>
     <a href="vistas/usuarios/usuarios.php" class="button">Usuarios</a>
-    <a href="calcalur_plan.php" class="button">Calcular plan de entrenamiento</a>
+    <a href="vistas/plan/calcalur_plan.php" class="button">Calcular plan de entrenamiento</a>
   </body>
 </html>
